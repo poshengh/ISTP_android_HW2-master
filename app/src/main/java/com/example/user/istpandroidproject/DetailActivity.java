@@ -118,7 +118,13 @@ public class DetailActivity extends CustomizedActivity {
             return true;
         }
         else if(itemId == R.id.action_level_up) {
-
+            // Steven Huang, implement HW-2
+            mData.level++;
+            setView(mData);
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra(OwnedPokemonInfo.nameKey, mData.name);
+            setResult(levelUp, returnIntent);
+            finish();
             return true;
         }
         else {

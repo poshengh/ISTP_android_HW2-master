@@ -10,7 +10,6 @@ public class OwnedPokemonInfo implements Parcelable {
 
     public final static String nameKey = "name";
 
-
     public static final int maxNumSkills = 4;
     public static String[] typeNames;
 

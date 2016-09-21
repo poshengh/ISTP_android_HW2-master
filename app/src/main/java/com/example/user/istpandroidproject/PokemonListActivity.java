@@ -120,7 +120,12 @@ public class PokemonListActivity extends CustomizedActivity implements OnPokemon
                 return;
             }
             else if(resultCode == DetailActivity.levelUp) {
-
+                // Steven Huang, implement HW-2
+                OwnedPokemonInfo ownedPokemonInfo =
+                        arrayAdapter.getItemWithName(data.getStringExtra(OwnedPokemonInfo.nameKey));
+                ownedPokemonInfo.level++;
+                arrayAdapter.update(ownedPokemonInfo);
+                return;
             }
 
 
